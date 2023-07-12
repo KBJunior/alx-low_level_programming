@@ -1,11 +1,26 @@
 #include "main.h"
-/**
- * _islower - checks for lowercase character
- * @c: the character to check
- * Return: 1 if c is lowercase, 0 otherwise
- */
-int _islower(int c)
-{
-return (c >= 'a' && c <= 'z');
-}
 
+/**
+ * _strcmp - compare string values
+ * @s1: 1st string
+ * @s2: 2nd string
+ * Return: s1[a] - s2[a]
+ */
+
+int _strcmp(char *s1, char *s2)
+{
+	int a;
+
+	a = 0;
+	/*compare s1 & s2, when '\0' have not been reached*/
+	while (s1[a] != '\0' && s2[a] != '\0')
+	{
+		if (s1[a] != s2[a])
+		{
+			/*returns 0 when expression = string are equal*/
+			return (s1[a] - s2[a]);
+		}
+		a++;
+	}
+	return (0);
+}
