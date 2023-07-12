@@ -28,3 +28,5 @@ char *_strcat(char *dest, char *src)
 	/*add the terminating null byte*/
 	*d = '\0';
 
+	return (dest);
+}

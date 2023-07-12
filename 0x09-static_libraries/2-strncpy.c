@@ -21,3 +21,9 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	/*if char remains, pad with null bytes*/
 	while (e < n)
+	{
+		dest[e] = '\0';
+		e++;
+	}
+	return (dest);
+}
